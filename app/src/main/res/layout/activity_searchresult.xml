@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back"
     tools:context=".searchresult">
 
 
@@ -11,7 +12,7 @@
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="@drawable/rounded_corner"
+        android:background="@drawable/roundcorner"
         android:orientation="horizontal">
 
         <SearchView
@@ -36,31 +37,129 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:id="@+id/LinearLayout1"
+        android:layout_width="250dp"
+        android:layout_height="38dp"
+        android:background="@drawable/rectangle"
+        android:layout_marginBottom="401dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="320dp"
         android:layout_marginTop="24dp"
-        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Spinner
+            android:id="@+id/spn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:entries="@array/spn_list"></Spinner>
+
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
-        <ScrollView
-            android:id="@+id/view3"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
-            android:background="#00FF00"
-            android:paddingRight="12dip"
-            android:scrollbarStyle="outsideOverlay">
+    </FrameLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="325dp"
+        android:layout_height="139dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/white_back"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout1">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="122dp"
+            android:layout_weight="1">
 
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/textView50"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#60AA60"
-                android:text="@string/scrollbar_3_text"
-                android:textColor="#000000" />
-        </ScrollView>
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="難易度：★★"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView80"
+                app:layout_constraintHorizontal_bias="0.409"
+                app:layout_constraintStart_toStartOf="@+id/textView80"
+                app:layout_constraintTop_toBottomOf="@+id/textView80"
+                app:layout_constraintVertical_bias="0.953" />
+
+            <ImageButton
+                android:id="@+id/ps10"
+                android:layout_width="129dp"
+                android:layout_height="108dp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/roundcorner"
+                android:cropToPadding="true"
+                android:padding="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cake" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="74dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:text="優格戚風蛋糕"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="分類：甜點"
+                app:layout_constraintEnd_toEndOf="@+id/textView110"
+                app:layout_constraintHorizontal_bias="0.285"
+                app:layout_constraintStart_toStartOf="@+id/textView110"
+                app:layout_constraintTop_toBottomOf="@+id/textView110" />
+
+            <TextView
+                android:id="@+id/textView110"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="32dp"
+                android:layout_weight="1"
+                android:text="份量：4人份"
+                app:layout_constraintStart_toEndOf="@+id/ps10"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
